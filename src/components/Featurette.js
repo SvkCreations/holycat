@@ -1,5 +1,6 @@
 import React from 'react';
-import img from '../ft-img-02.jpg'
+import img from '../ft-img-02.jpg';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Featurette() {
   return (
@@ -10,7 +11,7 @@ export default function Featurette() {
         <h4 className="fw-bold">The house of cats</h4>
         <p className="lead col-lg-10 mt-3">If you are a cat-person, then you have come to the right place and if you are not a cat-person, you'll become one today. Get random Images, GIFs of cute cats in our website. They are free to download too. So get started right away.</p>
         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Get started</button>
+          <HashLink className="btn btn-primary btn-lg px-4 me-md-2" to="#random">Get started</HashLink>
           <button type="button" className="btn btn-outline-dark btn-lg px-4">Learn more</button>
         </div>
       </div>
