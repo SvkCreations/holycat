@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App container">
         <Routes>
-          <Route path='/' element={
+          <Route path='/holycat' element={
             <div>
               <Navbar />
               <Featurette />
