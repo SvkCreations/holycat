@@ -1,4 +1,5 @@
 import './App.css';
+import BreedCats from './components/Breedcats';
 import Featurette from './components/Featurette';
 import Navbar from './components/Navbar';
 import RandomCats from './components/RandomCats';
@@ -9,6 +10,7 @@ function App() {
       <Navbar/>
       <Featurette/>
       <RandomCats/>
+      <BreedCats/>
     </div>
   );
 }

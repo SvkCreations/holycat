@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import img from '../random-img-03.jpg';
-import { saveAs } from 'file-saver';
 import Loading from './Loading';
+import loading from '../loading.gif'
 
 export default function RandomCats() {
 
@@ -11,8 +11,8 @@ export default function RandomCats() {
     })
     const fetchData = () => {
         setState({
-            results:[],
-            loading:true
+            results: [],
+            loading: true
         })
         fetch("https://api.thecatapi.com/v1/images/search?limit=9", {
             headers: {
@@ -46,20 +46,19 @@ export default function RandomCats() {
             </div>
 
             {/* Cat Image Gallery */}
-            <div className="container px-4 py-3" id="custom-cards">
+            <div className="container px-4 py-3 mb-5 border-bottom" id="custom-cards">
                 <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                    {state.loading && (<Loading/>)}
+                    {state.loading && (<Loading image={loading} />)}
                     {state.results.map((cat) => {
                         return (
                             <div className="col" key={cat.id}>
                                 <div className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style={{ backgroundImage: `url('${cat.url}')`, minHeight: `500px`, backgroundSize: "cover", backgroundPosition: "center" }}>
                                     <div className="d-flex justify-content-end h-100">
-                                        <a href={cat.url} className='btn btn-primary col-auto mt-auto d-flex align-items-center justify-content-center gap-1' target='_blank' download><iconify-icon icon="material-symbols:download-rounded" style={{fontSize:'24px'}}></iconify-icon>Download</a>
+                                        <a href={cat.url} className='btn btn-primary col-auto mt-auto d-flex align-items-center justify-content-center gap-1' target='_blank' download><iconify-icon icon="material-symbols:download-rounded" style={{ fontSize: '24px' }}></iconify-icon>Download</a>
                                     </div>
                                 </div>
                             </div>)
                     })}
-
 
                 </div>
             </div>
