@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -12,19 +14,16 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Random Cats</a>
+          <HashLink className="nav-link" to="#random">Random Cats</HashLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Cats by tags</a>
+          <HashLink className="nav-link" to="#breed">Cats by Breed</HashLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Cats by type</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">About us</a>
+          <Link className="nav-link" to="/about">About us</Link>
         </li>
       </ul>
     </div>

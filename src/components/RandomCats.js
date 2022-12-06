@@ -31,7 +31,7 @@ export default function RandomCats() {
     };
 
     return (
-        <div>
+        <div id='random'>
             <div className="row featurette d-flex align-items-center justify-content-center mt-4 mt-md-2 px-3 px-md-0">
                 <div className="col-md-5 order-2 me-auto">
                     <h2 className="featurette-heading fw-bold text-primary display-6 lh-1 p-0 m-0">Get Random cats</h2>
