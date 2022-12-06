@@ -40,7 +40,6 @@ export default function BreedCats() {
         })
             .then(data => data.json())
             .then(data => {
-                console.log(data)
                 setState({
                     result:data,
                     loading:false

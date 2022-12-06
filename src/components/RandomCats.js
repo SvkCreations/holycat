@@ -22,7 +22,6 @@ export default function RandomCats() {
         })
             .then(data => data.json())
             .then(data => {
-                console.log(data)
                 setState({
                     results: data,
                     loading: false
